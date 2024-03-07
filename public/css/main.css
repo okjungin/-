@@ -1,0 +1,86 @@
+.wrapper {
+    width : 60vw;
+    height : auto;
+    margin : 0 auto 10vh;
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+}
+
+.wrapper p {
+    margin-top : 20vh;
+    text-align : center;
+}
+
+.wrapper p .text {
+    font-size : 32px;
+    line-height : 1.5;
+    font-weight : 700;
+}
+
+.wrapper h3 {
+    margin-top : 10vh;
+}
+
+.wrapper h3 .text {
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    color : rgba(0, 0, 0, 0.6);
+    font-weight : 700;
+    white-space: nowrap;
+}
+
+.wrapper h3 .text .plus_icon {
+    font-size : 28px;
+    cursor : pointer;
+}
+.wrapper h3 .text .plus_icon:hover {
+    color : black;
+}
+
+.wrapper h3 .color_purple {
+    color : rgba(128, 0, 128, 0.8);
+}
+
+.wrapper h3 .hidden_text {
+    color : rgba(0,0,0,0.6);
+    font-weight : 500;
+    font-size : 15px;
+    text-align: left;
+    background-color : white;
+    padding : 10px 15px;
+    line-height : 1.3;
+    border-radius : 15px;
+    margin-top : 10px;
+    display : none;
+}
+.wrapper h3 .hidden_text.on {
+    display : flex;
+    justify-content : center;
+}
+
+.wrapper button.go_create_web {
+    margin-top : 10vh;
+    background-color : rgba(128, 0, 128, 0.8);
+    color : white;
+    font-weight : 600;
+    font-size : 16px;
+    height : 7.5vh;
+    padding : 0 20px;
+    border : none;
+    border-radius : 30px;
+    cursor : pointer;
+    display : flex;
+    justify-content: center;
+    gap : 5px;
+    align-items : center;
+}
+.wrapper button.go_create_web:hover {
+    background-color : purple;
+    font-weight : 600;
+}
+
+.wrapper button.go_create_web .go_icon {
+    font-size : 22px;
+}

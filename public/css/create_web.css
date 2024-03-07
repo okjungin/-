@@ -1,0 +1,97 @@
+body {
+    position : relative;
+}
+
+.default_wrapper.dark {
+    filter : brightness(50%);
+    pointer-events: none;
+}
+
+.my_web_wrapper {
+    display : flex;
+    justify-content: center;
+}
+
+iFrame#my_web {
+    margin-top : 10vh;
+    width : 100vw;
+    height : 100vh;
+    border : .5px solid silver;
+    /* border-radius : 10px; */
+    background-color: white;
+}
+
+.interface_wrapper {
+    display : flex;
+    justify-content: center;
+    /* margin-bottom : 10vh; */
+}
+
+.interface {
+    width : 100vw;
+    height : auto;
+    position : fixed;
+    bottom : 0;
+    padding : 5vh;
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : space-around;
+    gap : 10px;
+    background-color : white;
+    border-radius : 5px;
+    border : .5px solid silver;
+}
+.interface.off {
+    display : none;
+}
+
+.interface button {
+    border : none;
+    color : black;
+    font-weight : 500;
+    font-size : 16px;
+    cursor : pointer;
+    border-radius : 15px;
+    padding : 10px 20px;
+}
+
+.interface button#save {
+    background-color : purple;
+    color : white;
+}
+
+.interface.section {
+    display : none;
+    position : fixed;
+    bottom : 0;
+    padding : 5vh;
+}
+
+.interface.section.on {
+    display : flex;
+    justify-content : space-around;
+}
+.btns_wrapper {
+    display : none;
+}
+.btns_wrapper.on {
+    display : block;
+}
+/* .create_detail_wrapper {
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50vh);
+}
+
+.section_create_detail {
+    background-color : white;
+    border-radius : 10px;
+    padding : 15px;
+    line-height : 2.5;
+    display : none;
+}
+
+.section_create_detail.on {
+    display : block;
+} */

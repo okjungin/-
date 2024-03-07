@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코딩몽</title>
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/create_web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script defer src="/js/create_web/save_&_goback.js" type="module"></script>
+    <script defer src="/js/create_web/cc_section.js" type="module"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="default_wrapper">
+        <header>
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="CODING MONG">
+            </a>
+            <div class="menus">
+                <a class="menu guide" href="/guide">이용가이드</a>
+                <a class="menu menu1" href="/temporary1">임시 메뉴1</a>
+                <a class="menu menu2" href="/temporary2">임시 메뉴2</a>
+                <a class="menu menu3" href="/temporary3">임시 메뉴3</a>
+            </div>
+        </header>
+    
+        <div class="my_web_wrapper">
+            <iFrame id="my_web" src="/userCreateWeb" name="myWeb_Iframe">
+            </iFrame>
+        </div>
+    
+        <div class="interface_wrapper">
+            <div class="interface default">
+                <button id="create_section">섹션 생성</button>
+                <button id="create_text">텍스트 생성</button>
+                <button id="create_btn">버튼 생성</button>
+                <!-- <button id="dynamic">버튼 동적 기능 추가</button> -->
+                <button id="go_back">되돌리기</button>
+                <button id="full_screen" onclick="window.open('/userCreateWeb')">전체화면 보기</button>
+            </div>
+            <div class="interface section">
+                <div class="set_width">섹션 가로 너비는 <input type="text" class="input_width" value="100"/>%</div>
+                <div class="set_height">섹션 세로 너비는 <input type="text" class="input_height" value="20"/>%</div>
+                <div class="set_backgroundColor">섹션의 배경색은 <input type="text" class="input_backgroundColor"/></div>
+                <div class="set_border">
+                    섹션의 테두리는&nbsp;<input type="text" class="input_border_width" value="2"/>px 
+                    테두리 색상은&nbsp;<input type="text" class="input_border_color" value="silver">
+                    테두리 둥글게&nbsp;<input type="text" class="input_border_radius" value="0">px
+                </div>
+                <!-- <div class="set_padding">섹션의 내부 여백은 <input type="text" class="input_padding" value=""/>px</div>  -->
+                <div class="set_widthPosition">
+                    섹션의 가로 위치는 
+                    <input type="checkbox" class="cb_widthPosition left" checked="true"/>가장 왼쪽 
+                    <input type="checkbox" class="cb_widthPosition center"/>정중앙 
+                    <input type="checkbox" class="cb_widthPosition right"/>가장 오른쪽<br/>
+                    <input type="checkbox" class="cb_widthPosition custom"/>직접 입력
+                    왼쪽에서 <input type="text" class="input_widthPosition" value="0"/>%<br/>
+                    섹션의 세로 위치는
+                    위에서 <input type="text" class="input_heightPosition" value="0"/>%
+                </div>
+                <div class="set_innerText">(선택)내부 텍스트는&nbsp;<input type="text" class="input_innerText"/></div>
+                <div class="set_textWidthPosition">
+                    (선택) 텍스트 가로 정렬은 
+                    <input type="checkbox" class="cb_textWidthPosition left" checked="true"/>왼쪽 
+                    <input type="checkbox" class="cb_textWidthPosition center"/>정중앙
+                    <input type="checkbox" class="cb_textWidthPosition right"/>오른쪽
+                    <input type="checkbox" class="cb_textWidthPosition custom">직접 입력
+                    섹션의 왼쪽에서&nbsp;<input type="text" class="input_textWidthPosition" value="0">%
+                </div>
+                <div class="set_textHeightPosition">
+                    (선택) 텍스트 세로 정렬은 
+                    <input type="checkbox" class="cb_textHeightPosition top" checked="true"/>맨위 
+                    <input type="checkbox" class="cb_textHeightPosition center"/>정중앙
+                    <input type="checkbox" class="cb_textHeightPosition bottom"/>맨아래
+                    <input type="checkbox" class="cb_textHeightPosition custom">직접 입력
+                    섹션의 맨위에서&nbsp;<input type="text" class="input_textHeightPosition" value="0">%
+                </div>
+                <div class="btns_wrapper change">
+                    <button type="submit" class="change_btn">변경</button>
+                    <button type="submit" class="delete_btn">삭제</button>
+                    <button class="back_btn">뒤로</button>
+                </div>
+                <div class="btns_wrapper create">
+                    <button type="submit" class="create_btn">생성</button>
+                    <button type="submit" class="cancel_btn">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <h2 class="text_customizing">섹션 커스터마이징</h2>
+    <h3 class="text_default_value">(값을 입력하지 않으면 기본값이 할당됩니다.)</h3> -->
+
+    <div class="create_detail text_create_detail">
+        
+    </div>
+
+    <div class="create_detail button_create_detail">
+
+    </div>
+
+    <div class="create_detail button_dynamic_detail">
+
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>

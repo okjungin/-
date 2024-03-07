@@ -1,0 +1,60 @@
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family : 'Noto Sans KR';
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+header {
+    width : 100vw;
+    height : 10vh;
+    background-color: gold;
+    position : fixed;
+    top : 0;
+    border-bottom : .5px solid rgba(192, 192, 192, 0.7);
+}
+
+header .logo {
+    position : relative;
+    width : 100px;
+    height : 100%;
+    left : 5%;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    cursor : pointer;
+    z-index : 10;
+}
+
+header .logo img {
+    position : absolute;
+    height : 80%;
+}
+
+header .menus {
+    margin : 0 auto;
+    width : 60%;
+    height : 100%;
+    position : relative;
+    /* right : 5%; */
+    top : -10vh;
+    display : flex;
+    justify-content:flex-end;
+    justify-content: center;
+    gap : 20px;
+    align-items: center;
+
+}
+
+header .menus .menu {
+    font-weight : 600;
+    cursor : pointer;
+    color : black;
+    text-decoration : none;
+    font-size : 18px;
+    letter-spacing : -.5px;
+}
